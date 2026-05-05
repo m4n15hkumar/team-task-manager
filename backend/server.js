@@ -28,11 +28,11 @@ const path = require('path');
 // Serve Frontend in Production
 if (process.env.NODE_ENV === 'production') {
   // Set static folder
-  app.use(express.static(path.join(__dirname, '../frontend/dist')));
+  app.use(express.static(path.join(__dirname, 'public')));
 
   // Any route that doesn't match an API route will send the React index.html
   app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../frontend', 'dist', 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
   });
 } else {
   // Basic route
