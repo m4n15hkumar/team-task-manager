@@ -5,7 +5,7 @@ import api from '../api/axios';
 
 const Signup = () => {
   const [formData, setFormData] = useState({ name: '', email: '', password: '' });
-  const { register } = useContext(AuthContext);
+  const { login } = useContext(AuthContext);
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
